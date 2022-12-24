@@ -14,3 +14,11 @@ launch.json 파일에
  "file": "${workspaceFolder}/Numberstring/index.html"
 
 (파일 경로)을 작성해줌
+
+20221222~20221224 
+HTML과 레이아웃
+HTML 구조화
+HEADER 영역
+FOOTER영역
+CONTENT영역
+가상요소 활용
