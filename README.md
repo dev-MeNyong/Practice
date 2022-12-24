@@ -14,8 +14,3 @@ launch.json 파일에
  "file": "${workspaceFolder}/Numberstring/index.html"
 
 (파일 경로)을 작성해줌
-
-문제2
-
-content 영역 background css가 먹질 않음
-아직 해결하지 못함.
