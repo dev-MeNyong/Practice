@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
 <link rel="stylesheet" href="./ui.css?after"><!--css파일 적용하기-->
+<script src="../../jquery/jquery-3.6.3.min.js"></script>
+<script src="./ui.js"></script>
 </head>
 <body>
     <section id = "wrap"><!-- 콘텐츠, 헤더, 푸터 영역 한묶음-->
@@ -9,17 +11,17 @@
             <strong class="logo_box"><img src="./img/mainLogo.png" alt ="이지스퍼블리싱"></strong>
             <nav>
                 <ul>
-                    <li><a href="#">회사소개</a></li>
-                    <li><a href="#">도서소개</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li data-rol="menu1"><a href="#">회사소개</a></li>
+                    <li data-rol="menu2"><a href="#">도서소개</a></li>
+                    <li data-rol="menu3"><a href="#">FAQ</a></li>
+                    <li data-rol="menu4"><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
         <section id = "container">
             <section id ="menu1" class="content">
                 <h3>회사소개</h3>
-                <div class="conbox" ></div>
+                <div class="conbox" ></div>            
             </section>
             <section id ="menu2" class="content">
                  <h3>도서소개</h3>
@@ -42,4 +44,5 @@
             <a href="https://www.instagram.com/easyspub/" class="instar" title="인스타그램으로 이동"></a>
         </footer>
     </section>
+
 </body>
