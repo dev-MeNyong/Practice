@@ -59,26 +59,54 @@ header .logo_box img {width: 100px;}
        width: 350px; height: 400px; right: -170px; top: 100px; background-size: 100%;}
 #container .content h3{opacity: 0;}
 #container .content.this h3{height: auto; padding: 30px 0 20px 50px; color: #000; 
-                        position: relative; background:#fff; font-size: 28px; font-weight: 400; opacity: 1;}
+                        position: relative; background:#fff; font-size: 28px; font-weight: 400; opacity: 1; transition: all .6s; transition-delay: 1.2s;}
 
 #container .content.this h3:after{content:""; width: 100%; height: 8px; background: #ed3140; 
                                 position: absolute; left: 0; bottom: 0;}
 
-#container .content.this{width: 100%; left:0% !important;}
+#container .content.this{width: 100%; left:0% !important; height: 100%; overflow: hidden; overflow-y: auto;}
 #container .content.prev{width: 100%; left: -100% !important;}
 #container .content.next{width: 100%; left: 100% !important;}
 
 #container .content.this:before, #container .content.this:after,
-#container .content.next .conbox:before,
-#container .content.this .conbox:before{opacity: 0;}
+#container .content.this .conbox:before,
+#container .content.prev:before,#container .content.prev:after,
+#container .content.prev .conbox:before,#container .content.next:before, #container .content.next:after,
+#container .content.next .conbox:before {opacity: 0; transition: all .6s; transition-delay: .3s;} 
+
+#container .content.this .conbox:before{transform: translate3d(300px,0,0);}
+#container .content.this:after{transform: translate3d(-300px,0,0);}
 
 #container .content:nth-of-type(2){transition-delay: .3s;}
 #container .content:nth-of-type(3){transition-delay: .6s;}
 #container .content:nth-of-type(4){transition-delay: .8s;}
 #container.start .content{top: 0;}
+.pargrph_tit{margin-bottom: 50px; font-size: 24px; color: #fff; position: relative;}
+.pargrph_tit:after{content: ""; display: block; width: 30px; height: 8px; 
+background: #ed3140; position: absolute; left: 0; bottom: -10px;} 
+.text_box{position: relative;}
 
+
+.text_box h5{font-size: 30px; color: #d6d4d4; font-weight: 700;}
+.text_box p{margin-bottom: 50px; color: #ababab; line-height: 20px;}
+#container .content.this .conbox{max-width:1100px; margin:0 auto;}
+
+.text_box:nth-child(odd){text-align: left;}
+.text_box:nth-child(even){text-align: right;}
+.text_box:nth-child(1):after{content:""; display:block; width: 206px; height: 100%; 
+position: absolute; right: 0; top: 0; background:url(./img/content_img1.png) no-repeat right top;
+background-size: 206px auto; }
+.text_box:nth-child(1) p{width: 100%; padding-right: 206px;}
+.text_box:nth-last-child(1):before{content:""; display: block; width: 150px; height: 250px; 
+position: absolute; left: 0; top: 70px; background:url(./img/content_img2.png)no-repeat right top; background-size: 150px;}
+
+.text_box:nth-last-child(1):after{content:""; display: block; width: 150px; height: 250px; 
+        position: absolute; right: 0; top: -20px; background:url(./img/content_img3.png)no-repeat right top; background-size: 170px;}
+     
+.text_box:nth-last-child(1) p{padding: 0 200px 0 280px;}
+.text_box:nth-last-child(1) h5{color:#ed3140;}
 #container .content .conbox .content_wrap{opacity: 0;}
-#container .content.this .conbox .content_wrap {padding: 30px 50px 50px 50px; opacity: 1; }
+#container .content.this .conbox .content_wrap {padding: 30px 50px 50px 50px; opacity: 1; transition: 1.7s; transition-delay: .8s; }
 #container .content{top: -100%; transition: all .8s;}
 #wrap header nav{width: 100%; height:100%;}
 #wrap header nav ul{width: 100%; height:100%; display:flex; flex-direction: column; justify-content: center;}
@@ -88,7 +116,6 @@ header .logo_box img {width: 100px;}
                              border-radius:50%; background:#fff; position:absolute; left:0px; top:13px;}
 #wrap header nav ul li:hover a,#wrap header nav ul li.on a{color:#ed3140;}
 #wrap header nav ul li:hover:after,#wrap header nav ul li.on:after{background: #ed3140;}
-
 
 
 footer{width:180px; position: fixed; right:0px; bottom: 0px; padding: 0px 0px 30px 20px; 
