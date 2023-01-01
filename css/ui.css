@@ -105,6 +105,19 @@ position: absolute; left: 0; top: 70px; background:url(./img/content_img2.png)no
      
 .text_box:nth-last-child(1) p{padding: 0 200px 0 280px;}
 .text_box:nth-last-child(1) h5{color:#ed3140;}
+#menu2.content h4{font-size: 0;}
+#menu2.content.this .conbox{background: url(./img/bookbg.png) no-repeat -15px 360px; max-width:100%;}
+.notebook{width: 954px; height: 650px; margin: 100px auto 0 auto; background: url(./img/mackbook.png) no-repeat; background-size: 954px; position: relative;}
+.detail_content{width:719px; height: 453px; position: absolute;left: 117px; top: 38px; padding: 30px 0;}
+.img_book{width: 270px; float: left;}
+.img_book img{width: 270px;}
+.book_description{width: 449px; float: left; padding: 20px 20px 20px 40px;}
+.detail_content:after{content: ""; display: block; clear: both;}
+.book_description h5{font-size: 31px; font-weight: 700; color: #f92e68; line-height: 31px;}
+.book_description ul li em{font-weight: 700;}
+.book_description ul{margin-top: 10px;}
+
+
 #container .content .conbox .content_wrap{opacity: 0;}
 #container .content.this .conbox .content_wrap {padding: 30px 50px 50px 50px; opacity: 1; transition: 1.7s; transition-delay: .8s; }
 #container .content{top: -100%; transition: all .8s;}
